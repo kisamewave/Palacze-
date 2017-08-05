@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Marcin Waloszek, Norbert Kisielewski, Paweł Wójtowicz">
+
+    <title>Strona informacyjna przeciwko paleniu tytoniu</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+<!-- Nawigacja -->  
+<nav id="menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div id="thin_top_bar" class="container-fluid"></div>
+  <div id="top_bar" class="container-fluid"></div>
+    <div class="container">
+        <!-- Nawigacja mobilna -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img id="logo" src="images/logo_2.png" alt="Logo">
+
+        </div>
+<!-- END Nawigacja mobilna -->
+<!-- Nawigacja desktop -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav pull-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#statystyki">STATYSTYKI</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#geolokalizacja">MAPA</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#galeria">SKUTKI PALENIA TYTONIU</a>
+                </li>
+            </ul>
+        </div>
+<!-- END Nawigacja desktop -->
+    </div>
+</nav>
+<!-- END Nawigacja -->
+<!-- Film antynikotynowy -->
+<div class="container-fluid">
+    <div class="row">
+        <video width="100%" height="100%" controls>
+          <source src="files/Kampania społeczna _Nie wiąż się z papierosem_ - _Mam Haka na Raka_. Spot TV.mp4" type="video/mp4">
+        </video>     
+    </div>
+</div>
+<!-- END Film antynikotynowy -->
+<!-- Palący papieros -->
+<div id="cigarette" class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="wrapper">
+              <div class="cigarette">
+                <div class="filter"></div>
+                <div class="space"></div>
+                <div class="tobacco">
+                  <div class="burn"></div>
+                </div>
+                <br style="clear: both;" />
+                <div class="smoke"></div>
+              </div>
+              <div class="btn-smoke">Zapal papierosa!</div>
+              <div class="btn-reset">Od nowa</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Palący papieros -->
+<!-- Statystyki -->
+<section id="statystyki">
+    <div id="statystyki_content" class="container-fluid">
+         <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-center">statystyki</h1>
+                          <div class="accordion">
+                            <dl>
+                              <dt>
+                                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger"> Regularne palenie a sytuacja materialna (odsetek osób palących
+								codziennie wśród kobiet i mężczyzn według sytuacji materialnej)</a>
+                              </dt>
+                              <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+                                <p>
+
+								<center><div id="chartSlupkowy2" style="height: 300px; width: 100%;"><center>
+                              </dd>
+                              <dt>
+                                <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">
+                                  Regularne palenie a wiek (odsetek osób palących codziennie wśród
+                                                  kobiet i mężczyzn w poszczególnych grupach wiekowych).
+                                                  </a>
+                              </dt>
+                              <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
+
+                                <center><div id="chartSlupkowy" style="height: 300px; width: 100%;"><center>
+                              </dd>
+                              <dt>
+                                <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
+                                  Popularność palenia ze względu na wykształcenie
+                                </a>
+                              </dt>
+                              <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+
+                                                <center><div id="chartContainer" style="height: 300px; width: 100%;"></div></center>
+                                                </dd>
+                            </dl>
+                          </div>
+            </div>
+         </div>   
+    </div>
+</section>
+<!-- END Statystyki -->
+<!-- Opis -->
+<section id="geolokalizacja">
+    <div id="geolokalizacja_content" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-center">MAPA</h1>
+                    <div class="col-sm-6">
+                        <p>Mapa palaczy</p>
+                        <p><img class="img-responsive" src="images/smoking-map-2.jpg"</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p id="mapa" class="text-center">Naciśnij przycisk, aby zobaczyć swoją pozycję.</p>
+                        <center><button id="mapa_przycisk" onclick="getLocation()">Sprawdź pozycję</button></center>
+                        <div id="mapholder"></div>
+                    </div>
+                   
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END Opis -->
+<!-- Galeria -->
+<section id="galeria">
+    <div class="container-fluid">
+        <div class="container">
+            <h1 class="text-center">SKUTKI PALENIA TYTONIU</h1>
+<ul class="row">
+
+	  <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+	    <img class="img-responsive" src="images/2867592-zeby-prochnica-dentysta-900-667.jpg">
+	  </li>
+
+	  <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+	    <img class="img-responsive" src="images/000012964132.jpg">
+	  </li>
+
+	  <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+	    <img class="img-responsive" src="images/000013486345.jpg">
+	  </li>
+
+	  <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+	    <img class="img-responsive" src="images/000018207398.jpg">
+	  </li>
+
+	  <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+	    <img class="img-responsive" src="images/000032360702.jpg">
+	  </li>
+
+	  <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+	    <img class="img-responsive" src="images/000032741126.jpg">
+	  </li>
+          
+	</ul>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">         
+          <div class="modal-body">                
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</section>
+<!-- END Galeria -->
+<!-- Footer -->
+<div id="footer" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="pull-right">© Paweł Wójtowicz, Norbert Kisielewski, Marcin Waloszek</p>
+        </div>
+    </div>
+</div>
+
+<!-- END Footer -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Canvas -->
+    <script src="js/index.js"></script>
+    <script src="js/diagramy.js"></script>
+    <script type="text/javascript" src="js/canvasjs.min.js"></script>
+    
+    <!-- Galery -->
+    <script src="js/photo-gallery.js"></script>
+    
+    <!-- Own scripts -->
+    <script src="js/own.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+    
+
+	
+</body>
+
+</html>
